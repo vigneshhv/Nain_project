@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+.container1{
+    height: 89vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background:  #71b7e6;
+    position: relative;
+    margin-left: 200px;
+  }
+  .container{
+    max-width: 1300px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    height: 80vh;
+}
+  .container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+  }
+  .container .title::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 50px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  }
+  .content .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+    /* overflow-x:auto; */
+  }
+  input[type="submit"]{
+    height: 45px;
+    width: auto;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;padding-right: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    margin-left: 25px;
+    cursor:pointer;
+    margin-top: 5px;
+
+}
+input[type="date"],select{
+    height: 45px;
+    width: auto;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    margin-left: 25px;
+    margin-top: 5px;
+}
+input[type="admission"],select{
+  height: 45px;
+  width: auto;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  margin-left: 25px;
+  margin-top: 5px;
+}
+
+label{
+    font-size: 24px;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+  
+ 
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    margin-top:20px;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 16px;
+  }
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }

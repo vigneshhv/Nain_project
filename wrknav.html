@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="wrknav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    * {box-sizing: border-box;}
+    
+    nav { 
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .header {
+      overflow: hidden;
+      background-color: #252950;
+      padding :10px ;
+      height:80px;
+    }
+    
+    .header a {
+      float: left;
+      color: #fff;
+      text-align: center;
+      padding: 12px;
+      text-decoration: none;
+      font-size: 18px; 
+      line-height: 25px;
+      border-radius: 4px;
+    }
+    
+    .header a.logo {
+      font-size: 40px;
+      font-weight: bold;
+      
+    }
+    
+    .header a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    
+    .header a.active {
+      background-color: rgba(132, 65, 179, 0.813);
+      color: white;
+    }
+    
+    .header-right {
+      float: right;
+    }
+    .header img{
+  width: 55px;
+  float: left;
+  height: 40px;
+  padding-right: 10px;
+
+
+    }
+    @media screen and (max-width: 500px) {
+      .header a {
+        float: none;
+        display: block;
+        text-align: right;
+      }
+      
+      .header-right {
+        float: none;
+      }
+    }
+    </style>
+<nav>
+    <div class="header">
+        <a href="logo.jpg" class="logo"><img src="logo.jpg" alt="">
+            I Safe</a>
+        <div class="header-right">
+          
+          <a href="welcome.php" class="active">home</a>
+          <a href="logout.php">Logout</a>
+        </div>
+      </div>
+    <div class="sidenav">
+        <a href="regerstation.php" class="active">Regerstation</a>
+        
+        <button class="dropdown-btn">Attendance
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <a href="presentday.php">Present day</a>
+            <a href="class_attendance.php">Class wise</a>
+            <a href="student.php">Student wise</a>
+          </div>
+          <a href="#">Master settings</a>
+            <a href="#">Academics</a>
+        <a href="#">Examination</a>
+        <button class="dropdown-btn">Dropdown 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        <a href="#contact">Search</a>
+        
+      </div>
+    </nav>
+<script>
+    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+    
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+        } else {
+          dropdownContent.style.display = "block";
+        }
+      });
+    }
+    </script>
+</html>
